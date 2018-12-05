@@ -15,7 +15,7 @@ curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
 #安装docker-compose
 curl -L https://github.com/docker/compose/releases/download/1.20.1/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
 chmod +x /usr/local/bin/docker-compose
-#安装gitwdewfedawfasfaef
+#安装git
 apt-get update
 apt-get install git
 #安装nodejs
