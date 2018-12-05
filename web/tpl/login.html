@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>有户登入</title>
+</head>
+<body>
+{{if .Flag}}
+<div>
+    输入的用户名或密码错误，请重新输入！！！！
+</div>
+{{end}}
+<div>
+    <form action="/login", method="post">
+        用户名:<input type="text" name="loginName" value="{{.Cuser.LoginName}}"/>
+        <br/><br/>
+        密码:<input type="password" name="password"/>
+        <br/><br/>
+        <input type="submit" value = "登入"/>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="reset" value = "重置"/>
+
+    </form>
+</div>
+
+</body>
+</html>

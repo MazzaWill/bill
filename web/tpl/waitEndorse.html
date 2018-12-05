@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>待签收票据列表</title>
+</head>
+<body>
+<div>
+    <div>
+        当前登入用户:{{.Cuser.Acct}}
+    </div>
+<div>
+    <a href="/addBill">发布票据</a>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="bills">我的票据</a>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="/waitEndorseBills">待签收</a>
+    <a href="/loginout">退出</a>
+</div>
+    <h3>待签收票据列表</h3>
+    <table>
+        <tr>
+        <th>票据号码</th>
+        <th>票据状态</th>
+        <th>所属关系</th>
+        <th>操作</th>
+        </tr>
+        {{range .Bills}}
+         <tr>
+            <td>{{.BillInfoID}}</td>
+            <td>
+            {{if eq .State "NewPublish"}}
+                新发布
+            {{else if eq .State "EndorseWaitSign"}}
+                待背书
+            {{else if eq .State "EndorseSigned"}}
+                背书签收
+            {{else if eq .State "EndorseReject"}}
+                背书拒绝
+            {{end}}
+            </td>
+                    <td>
+                        {{.HoldrAcct}}持有票据，待{{.WaitEndorseAcct}}签收
+                    </td>
+             <td>
+                 <a href="/waitEndorseInfo?billNo={{.BillInfoID}}">详情</a>
+             </td>
+         </tr>
+                {{end}}
+    </table>
+</div>
+</body>
+</html>
