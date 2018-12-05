@@ -31,7 +31,7 @@ wget https://dl.google.com/go/go1.10.3.linux-amd64.tar.gz(1.10.3)
  export PATH=$GOROOT/bin:$PATH
  ##source /etc/profile(很重要！！！！)
  #docker fabric images下载
- https://github.com/hyperledger/fabric/blob/release-1.2/scripts/bootstrap.sh => 运行sh文件（fabric-1.2.1）
+ wget https://github.com/hyperledger/fabric/blob/release-1.2/scripts/bootstrap.sh => 运行sh文件（fabric-1.2.1）
  生成 bin 目录，添加到环境变量
  export PATH=/root/fabric-samples/bin:$PATH
  ##修复阿里云超时bug(很重要！！！)
@@ -77,6 +77,7 @@ remote: Total 4530 (delta 543), reused 2596 (delta 376), pack-reused 0
 Receiving objects: 100% (4530/4530), 16.51 MiB | 120.00 KiB/s, done.
 Resolving deltas: 100% (543/543), done.
 (fabric已经更新到1.3，下载fabric-sdk-go;会匹配1.3的环境，可以修改Makefile文件，以符合当前运行环境)
+注意：网络问题会很严重！！！！！！！！！！！！！！！！！
 
 进入到first-net文件夹，运行命令：(./byfn generate 以及 ./byfn up)
 
@@ -102,4 +103,6 @@ Resolving deltas: 100% (543/543), done.
 Web应用采用jQuery+HTML+CSS 的前端架构编写页面，提供用户交 互的界面操作，包括用户操作的功能 业务操作的功能。用户是内置的，只提供用户登录和用户退出操作。业务操作 包括发布 查询持票人持有的票据、发起票据背书、查询待签收票据、签收票据 背书、拒绝票据背书等功能
 
 ##ps:各个层之间采用不同的接口，业务层的Go SDK、智能合约和区块链底层平台之间用gRPC的接口。
+
+
 
