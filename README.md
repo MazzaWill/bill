@@ -80,7 +80,7 @@ Resolving deltas: 100% (543/543), done.
 
 进入到first-net文件夹，运行命令：(./byfn generate 以及 ./byfn up) 成功实例：
 ```
-![OK (2)](./img/OK (2).png)
+![OK](./img/OK.png)
 # 主菜
 票据背书的应用开发实例会对票据的应用场最进行简化，实现的业务逻辑包括 票据发布、票据背书、票据签收，票据拒收、票据查询等操作
 ##fixtures文件（区块链底层平台）
