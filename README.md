@@ -80,13 +80,13 @@ Resolving deltas: 100% (543/543), done.
 
 进入到first-net文件夹，运行命令：(./byfn generate 以及 ./byfn up) 成功实例：
 ```
-![OK (2)](C:\Users\wuzhanfly\Desktop\OK (2).png)
+![OK (2)](C:\Users\wuzhanfly\Desktop\bill\img\OK (2).png)
 # 主菜
 票据背书的应用开发实例会对票据的应用场最进行简化，实现的业务逻辑包括 票据发布、票据背书、票据签收，票据拒收、票据查询等操作
 ##fixtures文件（区块链底层平台）
 区块链底层平台: 提供分布式共享账本的维护、状态数据库维护、智能合约的全 生命周期管理等区块链功能，实现数据的不可篡改和智能合约的业务逻辑。
-单独启动网络：进入文件加，docker-compose -f docker-compose.yaml up -d：成功例子：
-![fabric](C:\Users\wuzhanfly\Desktop\fabric.png)
+单独启动网络：进入文件加，docker-compose -f docker-compose.yaml up -d：例子：
+![fabric](C:\Users\wuzhanfly\Desktop\bill\img\fabric.png)
 注释：fabric网路是简单的“1+1+2“模式，以first-network为原型;象生成组织结构，ca文件，使用的是crypto-config.yaml文件等等
 
 ##blockchain文件
