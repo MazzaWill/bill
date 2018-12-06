@@ -1,9 +1,10 @@
 # Bill
-#以Hyperlerger Fabric 为底层的票据项目
+## 以Hyperlerger Fabric 为底层的票据项目
 
-#项目前提
+### 项目前提
 
-##开发环境搭建
+### 开发环境搭建
+
 1. docker
 2. docker-compose
 3. git
