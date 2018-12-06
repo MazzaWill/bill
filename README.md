@@ -9,6 +9,7 @@
 3. git
 4. nodejs
 5. go
+6. .........
 ```
 #安装docker
 curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
@@ -83,23 +84,29 @@ Resolving deltas: 100% (543/543), done.
 ![OK](./img/OK.png)
 # 主菜
 票据背书的应用开发实例会对票据的应用场最进行简化，实现的业务逻辑包括 票据发布、票据背书、票据签收，票据拒收、票据查询等操作
-##fixtures文件（区块链底层平台）
+
+###fixtures文件（区块链底层平台）
 区块链底层平台: 提供分布式共享账本的维护、状态数据库维护、智能合约的全 生命周期管理等区块链功能，实现数据的不可篡改和智能合约的业务逻辑。
 单独启动网络：进入文件加，docker-compose -f docker-compose.yaml up -d：例子：
 ![fabric](./img/fabric.png)
 注释：fabric网路是简单的“1+1+2“模式，以first-network为原型;象生成组织结构，ca文件，使用的是crypto-config.yaml文件等等
 
-##blockchain文件
+### blockchain文件
+
 主要是配合mainbo处理链码的初始化和实例化两步骤
-#chaincode文件：智能合约(链码)
+### chaincode文件：智能合约(链码)
+
 智能合约: 智能合约通过链码来实现，包括票据发布、票据背书、票据背书签 收、票据背书拒绝等链码调用功能，链码查询包括查询持票人票据、查询待签 收票据、根据链码号码查询票据信息等。
 链码即商业逻辑因为使用的是levelDB,查询使用了复合键（CreateCompositeKey）
 注释：couchDB可以复查询，不用这麽麻烦
 
-##service文件（业务层）
+### service文件（业务层）
+
 应用程序的后端服务，给Web应用提供RESTful的接口，处理 前端的业务请求。后端服务的基本功能包括用户管理和票据管理，通过 Hyperledger Fabri提供的Go SDK和区块链网络进行通信
-##web文件（ 应用层）
+
+### web文件（ 应用层）
+
 Web应用采用jQuery+HTML+CSS 的前端架构编写页面，提供用户交 互的界面操作，包括用户操作的功能 业务操作的功能。用户是内置的，只提供用户登录和用户退出操作。业务操作 包括发布 查询持票人持有的票据、发起票据背书、查询待签收票据、签收票据 背书、拒绝票据背书等功能
 
-##ps:各个层之间采用不同的接口，业务层的Go SDK、智能合约和区块链底层平台之间用gRPC的接口。
+####ps:各个层之间采用不同的接口，业务层的Go SDK、智能合约和区块链底层平台之间用gRPC的接口。
 
